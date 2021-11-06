@@ -30,7 +30,7 @@
  *
  *********************************************************************************
  *
- * @file count.cpp
+ * @file StringManipulation.cpp
  * @brief Implementation of a counter program
  *
  * @details This file implements an algorithm that counts from 1 to 100.
@@ -43,7 +43,7 @@
  * 
  * date of last update in yy-mm-dd format
  *
- * @date 2021-11-04
+ * @date 2021-11-05
  *
  * @version 1.00
  * 
@@ -51,32 +51,55 @@
  *
  *      Version     Date            Author          Changes
  *
- *      1.00        2021-11-04      GSHIMABUKO      First implementation
+ *      1.00        2021-11-0      GSHIMABUKO      First implementation
  *
  *********************************************************************************
  */
 
 
 #include <iostream>
+#include <string>
 
-void count(){
-    for (int i = 1; i <= 100; i++)
+int ConcatRemove(std::string s, std::string t, int k){
+    int diff = s.length() - t.length();
+    int s_size = s.length();
+    int t_size = t.length();
+    if (k < abs(diff))
     {
-        if ((i % 3 != 0) && (i % 5 != 0))
+        return 0;
+    }
+    else if (k >= abs(diff))
+    {
+        if ((k - abs(diff)) % 2 !=0)
         {
-            std::cout << i << std::endl;
+            return 0;
+        }
+        else if (k >= (s_size+t_size))
+        {
+            return 1;
+        }
+        else if (diff > 0)
+        {
+            for (int i = 0; i < s_size - (k - diff)/2 - diff ; i++)
+            {
+               if(s[i] != t[i])
+                {
+                    return 0;
+                }
+            }
+            return 1;
         }
         else
         {
-            if(i % 3 == 0)
+            for (int i = 0; i < (s_size - (k +  diff)/2); i++)
             {
-                std::cout << "Foo";
+               if(s[i] != t[i])
+                {
+                    return 0;
+                }
             }
-            if (i % 5 == 0)
-            {
-                std::cout << "Baa";
-            }
-            std::cout << std::endl;
+            return 1;
         }
     }
+    return -1;
 }

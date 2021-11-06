@@ -60,10 +60,22 @@
  *********************************************************************************
  */
 
-
-#include "count.h"
+#include "stringManipulation.h"
+#include <string>
+#include <iostream>
 
 int main(){
-    count();
+    std::string s = "abcd";
+    std::string t = "abc";
+    int k = 55555;
+    int possible = ConcatRemove(s,t,k);
+    if( possible == 1)
+    {
+        std::cout << "Yes" << std::endl;
+    }
+    else
+    {
+        std::cout << "No" << std::endl;
+    }
     return(0);
 }
