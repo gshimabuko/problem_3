@@ -3,7 +3,7 @@
  * @author  Guilherme Shimabuko - Shima's Digital Hardware
  *
  * @brief   Repository for the second technical challenge of a problem set for a 
- * C++ Software Engineer at <confidential>
+ * C++ Software Engineer position at <confidential>
  *          
  *
  * @details This project consists of a C++ program designed to determine whether

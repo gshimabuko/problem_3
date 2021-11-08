@@ -36,8 +36,8 @@
  * @details This file implements an algorithm that counts from 1 to 100.
  *          For each multiple of 3, it prints "Foo" instead of the number.
  *          For each multiple of 5, it prints "Baa" instead of the number.
- *          For multiples of 3 and 5 simultaneously, print "FooBaa", instead of the
- *          number.xxx
+ *          For multiples of 3 and 5 simultaneously, print "FooBaa", instead of
+ * the number.
  *
  * @author Guilherme Shimabuko
  * 
