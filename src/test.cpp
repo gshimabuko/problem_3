@@ -65,8 +65,8 @@
 #include <iostream>
 
 int main(){
-    std::string s = "abcd";
-    std::string t = "abc";
+    std::string s = "abc";
+    std::string t = "";
     int k = 55555;
     int possible = ConcatRemove(s,t,k);
     if( possible == 1)
